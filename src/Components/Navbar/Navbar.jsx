@@ -24,6 +24,12 @@ const Navbar = () => {
                     </div>
                     <Link to={'/'} className="btn btn-ghost text-4xl uppercase text-black font-bold md:ml-6">Task</Link>
                 </div>
+                <div className="navbar-center hidden lg:flex text-black font-semibold">
+                    <ul className="menu menu-horizontal px-1">
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><Link to={'/applicants'}>Applicants</Link></li>
+                    </ul>
+                </div>
                 <div className="navbar-end space-x-4 mr-6">
                     <Link to={'/signup'} class="bg-gradient-to-r from-blue-600 font-semibold via-blue-600 to-blue-700 text-white py-2 px-6 rounded-full shadow-lg hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-300 shadow-lg shadow-gray-400/30 hover:shadow-xl hover:shadow-blue-400/50">
                         Signup
