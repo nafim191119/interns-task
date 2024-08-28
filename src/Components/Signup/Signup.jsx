@@ -1,13 +1,24 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const Signup = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const onSubmit = async (data) => {
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500
+        });
         const formData = new FormData();
         formData.append('name', data.name);
         formData.append('email', data.email);
+        formData.append('phone', data.phone);
+        formData.append('salary', data.salary);
+        formData.append('department', data.department);
         formData.append('resume', data.resume[0]);
         try {
             const response = await fetch('http://localhost:5000/api/signup', {
@@ -17,11 +28,11 @@ const Signup = () => {
             if (response.ok) {
                 console.log('User registered successfully!');
                 reset();
-            } 
+            }
             else {
                 console.error('Failed to register user');
             }
-        } 
+        }
         catch (error) {
             console.error('Error during form submission:', error);
         }

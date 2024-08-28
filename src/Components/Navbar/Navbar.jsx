@@ -28,6 +28,8 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to={'/'}>Home</Link></li>
                         <li><Link to={'/applicants'}>Applicants</Link></li>
+                        <li><Link to={'/about'}>About</Link></li>
+                        <li><Link to={'/jobs'}>Job List</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4 mr-6">
