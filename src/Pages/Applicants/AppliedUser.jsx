@@ -6,9 +6,10 @@ import LinearProgress from '@mui/material/LinearProgress';
 const AppliedUser = () => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
+    const apiUrl = 'https://task-server-tau-dusky.vercel.app/api';
 
     useEffect(() => {
-        fetch('https://intern-task-server-1.onrender.com/api/users')
+        fetch(`${apiUrl}/users`)
             .then(response => response.json())
             .then(data => {
                 setUsers(data);

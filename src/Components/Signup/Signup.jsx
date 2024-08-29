@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 
 const Signup = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const apiUrl = 'https://task-server-tau-dusky.vercel.app/api';
 
     const onSubmit = async (data) => {
         Swal.fire({
@@ -21,7 +22,7 @@ const Signup = () => {
         formData.append('department', data.department);
         formData.append('resume', data.resume[0]);
         try {
-            const response = await fetch('http://localhost:5000/api/signup', {
+            const response = await fetch(`${apiUrl}/signup`, {
                 method: 'POST',
                 body: formData,
             });

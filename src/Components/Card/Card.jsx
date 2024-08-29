@@ -3,9 +3,10 @@ import { IoMdDownload } from "react-icons/io";
 
 const Card = ({ item }) => {
     const { name, email, _id, phone, salary, department } = item;
+    const apiUrl = 'https://task-server-tau-dusky.vercel.app/api';
 
     const handleDownload = () => {
-        window.open(`https://intern-task-server-1.onrender.com/api/download/${_id}`, '_blank');
+        window.open(`${apiUrl}/download/${_id}`, '_blank');
     };
 
     return (
