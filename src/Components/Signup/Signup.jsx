@@ -21,7 +21,7 @@ const Signup = () => {
         formData.append('department', data.department);
         formData.append('resume', data.resume[0]);
         try {
-            const response = await fetch('http://localhost:5000/api/signup', {
+            const response = await fetch('https://intern-task-server-1.onrender.com/api/signup', {
                 method: 'POST',
                 body: formData,
             });
