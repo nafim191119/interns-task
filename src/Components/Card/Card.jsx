@@ -5,7 +5,7 @@ const Card = ({ item }) => {
     const { name, email, _id, phone, salary, department } = item;
 
     const handleDownload = () => {
-        window.open(`http://localhost:5000/api/download/${_id}`, '_blank');
+        window.open(`https://intern-task-server-1.onrender.com/api/download/${_id}`, '_blank');
     };
 
     return (
