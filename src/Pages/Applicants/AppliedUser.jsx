@@ -8,7 +8,7 @@ const AppliedUser = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/users')
+        fetch('https://intern-task-server-1.onrender.com/api/users')
             .then(response => response.json())
             .then(data => {
                 setUsers(data);
